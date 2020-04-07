@@ -1,22 +1,25 @@
-function pageStyle() {
-  return {
-    padding: "10%",
-    marginTop: 10,
-  };
-}
-
 function categoryStyle(){
   return{
-    backgroundColor: "tan",
-    width:"80%",
-    verticalAlign: "middle"
+    display:"inline-block",
+    margin:"0 10px 0 10px"
   }
 }
 
 function boardStyle(){
   return{
-    backgroundColor: "tan",
     width:"80%",
+    margin:"50px 10% 0 10%"
+  }
+}
+
+function questionStyle(){
+  return{
+    width:"80%",
+    color:"yellow",
+    minHeight: "300px",
+    borderRadius: "20px",
+    backgroundColor: "blue",
+    textAlign: "center",
     margin:"50px 10% 0 10%"
   }
 }
@@ -29,9 +32,8 @@ function paneStyle(){
     width: "150px",
     borderRadius: "20px",
     textAlign:"center",
-    display: "inline-block",
-    margin:"10px"
-
+    margin: '10px 0 10px 0',
+    paddingTop: '10px'
   }
 }
 
@@ -44,12 +46,11 @@ function categoryPaneStyle(){
     borderRadius: "20px",
     textAlign:"center",
     verticalAlign: "middle",
-    display: "inline-block",
-    margin:"10px"
-
+    margin: '10px 0 10px 0',
+    paddingTop: '10px'
   }
 }
 
 
 
-module.exports = { pageStyle, categoryStyle, boardStyle, paneStyle, categoryPaneStyle};
+module.exports = {categoryStyle, boardStyle, questionStyle, paneStyle, categoryPaneStyle};
