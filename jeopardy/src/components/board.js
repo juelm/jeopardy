@@ -15,7 +15,7 @@ function Board() {
 
 
   useEffect(() => {
-    createBoard(setBoard);
+    createBoard(setBoard, 27);
   }, []);
 
   function handleClick(event){

@@ -1,6 +1,5 @@
-export default async function createBoard(setBoard){
+export default async function createBoard(setBoard, offset){
 
-    let offset  = Math.ceil(Math.random() *500)
     let boardState = {};
    
     let res = await fetch(`http://jservice.io/api/categories?count=6&offset=${offset}`);
