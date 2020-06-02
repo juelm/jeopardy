@@ -16,11 +16,23 @@ function questionStyle(){
   return{
     width:"80%",
     color:"yellow",
-    minHeight: "300px",
+    height: "100px",
     borderRadius: "20px",
     backgroundColor: "blue",
     textAlign: "center",
     margin:"50px 10% 0 10%"
+  }
+}
+
+function headerStyle(){
+  return{
+    width:"64%",
+    color:"yellow",
+    height: "100px",
+    borderRadius: "20px",
+    backgroundColor: "blue",
+    textAlign: "center",
+    margin:"25px 18% 0 18%"
   }
 }
 
@@ -53,4 +65,4 @@ function categoryPaneStyle(){
 
 
 
-module.exports = {categoryStyle, boardStyle, questionStyle, paneStyle, categoryPaneStyle};
+module.exports = {categoryStyle, boardStyle, questionStyle, headerStyle, paneStyle, categoryPaneStyle};

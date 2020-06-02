@@ -4,7 +4,6 @@ import Category from './Category'
 import createBoard from '../modules/createBoard'
 import QuestionPane from "./QuestionPane";
 import {questionStyle} from '../modules/styles'
-import LoadButton from "./LoadButton";
 
 function Board() {
   const [board, setBoard] = useState({});
@@ -31,9 +30,11 @@ function Board() {
     //console.log(event.target.id);
   }
 
-  function onSubmit(){
+  function onSubmit(e){
+    console.log(e);
     if(currentQuestion == currentAnswer){
         setScore(score + points);
+        alert("Correct!");
     }else{
         setScore(score - points);
     }
@@ -52,7 +53,7 @@ function Board() {
 
   return (
     <div style = {boardStyle()}>
-        {currentQuestion ? <QuestionPane question = {currentQuestion } onClick = {() => handleClick}></QuestionPane> : createBoardDisplay()}
+        {currentQuestion ? <QuestionPane question = {currentQuestion} onClick = {() => onSubmit}></QuestionPane> : createBoardDisplay()}
     </div>
   );
 }
